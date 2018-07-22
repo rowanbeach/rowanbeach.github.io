@@ -55,7 +55,7 @@ a:link {
 }
 
 .bg1::after {
-    background-image: url('annie-spratt-330560-unsplash.jpg');
+    background-image: url('background.jpg');
     background-size: 300vh;
     background-repeat: no-repeat;
 }
