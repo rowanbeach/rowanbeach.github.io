@@ -3,7 +3,70 @@
 <head>
     <title>Rowan Beach</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="main.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-family: 'Arial, Helvetica, sans-serif', sans-serif;
+        }
+
+        h1 {
+            font-size: 82px;
+            font-weight: normal;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .wrapper {
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            perspective: 2px;
+        }
+
+        .section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-direction: column;
+        }
+
+        .parallax::after {
+            content: " ";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            transform: translateZ(-1px) scale(1.5);
+            background-size: 100%;
+            z-index: -1;
+        }
+
+        .contact {
+            background: #ffffff;
+            color: #666666;
+        }
+
+        a:link {
+            text-decoration: none;
+            color: #666666;
+        }
+
+        .bg1::after {
+            background-image: url('background.jpg');
+            background-size: 300vh;
+            background-repeat: no-repeat;
+        }
+
+    </style>
 </head>
 
 
