@@ -4,66 +4,48 @@
     <title>Rowan Beach</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body, html {
+        * {
             margin: 0;
             padding: 0;
         }
 
+        body {
+            background-color: #353535;
+        }
+
         html {
-            font-family: 'Arial, Helvetica, sans-serif', sans-serif;
+            font-family: 'Avenir Next, Arial, sans-serif', sans-serif;
         }
 
         h1 {
-            font-size: 82px;
-            font-weight: normal;
-            text-align: center;
-            margin-bottom: 20px;
-            margin-top: 20px;
+            color: #ffffff;
+            font-size: 6rem;
+            font-weight: lighter;
+            margin: 0 0 1rem 0;
         }
 
-        .wrapper {
-            height: 100vh;
-            overflow-x: hidden;
-            overflow-y: auto;
-            perspective: 2px;
+        .subheader {
+            color: #ffffff;
+            font-size: 2.4rem;
+            font-weight: lighter;
+            margin: 0 1.4rem;
         }
 
         .section {
-            position: relative;
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
             flex-direction: column;
         }
 
-        .parallax::after {
-            content: " ";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            transform: translateZ(-1px) scale(1.5);
-            background-size: 100%;
-            z-index: -1;
-        }
-
-        .contact {
-            background: #ffffff;
-            color: #666666;
+        .text-wrapper {
+            text-align: center;
         }
 
         a:link {
             text-decoration: none;
-            color: #666666;
-        }
-
-        .bg1::after {
-            background-image: url('background.jpg');
-            background-size: 300vh;
-            background-repeat: no-repeat;
+            color: #78A22F;
         }
 
     </style>
@@ -71,12 +53,16 @@
 
 
 <body>
-<main class="wrapper">
-    <section class="section parallax bg1">
+<section class="section">
+    <svg viewBox="0 0 100 100" height="400" width="400" xmlns="http://www.w3.org/2000/svg">
+        <path stroke="#78A22F" fill="#78A22F" d="M71.977 55.043c-.217-.216-.877-.876-3.26-.876-3.63 0-9.342 1.475-13.498 5.628-1.393 1.394-2.431 2.882-3.223 4.303v-9.226c.543.146 1.18.226 1.924.226 3.668 0 9.153-1.783 13.139-5.77 5.611-5.612 6.66-14.643 4.774-16.527-.21-.211-.852-.853-3.135-.853-2.883 0-8.948 1.186-13.392 5.628-1.448 1.447-2.51 2.995-3.311 4.46V36.68c2.71-1.893 6.636-8.31 6.636-14.482 0-7.687-5.401-12.883-7.707-13.409-.148-.033-.303-.051-.461-.051-2.656 0-7.86 6.094-7.86 13.46 0 6.172 3.927 12.59 6.637 14.482v5.42c-.807-1.486-1.881-3.061-3.355-4.533-4.459-4.46-10.532-5.649-13.418-5.649-2.269 0-2.907.639-3.115.848-1.19 1.188-.941 4.494-.369 6.964.498 2.142 1.832 6.235 5.167 9.571 4 4.002 9.494 5.792 13.165 5.792h.001c.744 0 1.381-.081 1.924-.229v9.848c-.849-1.624-2.016-3.378-3.65-5.012-4.609-4.609-10.821-5.84-13.765-5.84-1.503 0-2.508.276-3.073.841-1.202 1.2-.925 4.563-.323 7.075.522 2.182 1.907 6.35 5.32 9.763 4.132 4.133 9.758 5.982 13.5 5.983.773 0 1.437-.083 1.991-.244v12.75h2.755v-12.68c.562.147 1.214.229 1.98.229 3.72 0 9.258-1.785 13.248-5.776 5.668-5.667 6.679-14.832 4.754-16.758zM57.255 39.524c3.806-3.805 8.983-4.821 11.443-4.821.569 0 .941.054 1.148.101.431 1.604-.31 8.15-4.736 12.576-3.409 3.41-8.191 4.963-11.19 4.963-.837 0-1.283-.128-1.436-.197-.609-1.143-.086-7.767 4.771-12.622zm-8.522 12.619c-.152.071-.593.195-1.417.195-3.001 0-7.792-1.56-11.217-4.985-4.43-4.43-5.185-10.975-4.759-12.583.205-.046.57-.097 1.128-.097 2.462 0 7.648 1.02 11.471 4.842 4.857 4.858 5.399 11.481 4.794 12.628zm-.098 22.436c-.151.068-.583.188-1.384.188-3.071-.001-7.996-1.62-11.552-5.177-4.558-4.557-5.378-11.244-4.956-12.885.199-.043.552-.091 1.084-.091 2.346 0 7.835 1.053 11.817 5.032 4.993 4.996 5.598 11.764 4.991 12.933zm-3.276-52.38c0-5.964 3.919-10.302 5.044-10.688 1.05.468 5.474 4.296 5.474 10.688 0 5.549-3.772 10.907-5.258 12.138-1.487-1.232-5.26-6.588-5.26-12.138zm19.918 47.655c-3.923 3.922-8.949 4.969-11.301 4.969-1.015 0-1.494-.177-1.533-.186-.691-1.001-.308-7.863 4.724-12.894 3.808-3.807 9.052-4.821 11.55-4.821.649 0 1.064.064 1.279.118.474 1.596-.195 8.29-4.719 12.814z"/>
+    </svg>
+    <div class="text-wrapper">
         <h1>Rowan Beach</h1>
-    </section>
-    <section class="section contact">
-        <a href="mailto:info@rowanbeach.com">info@rowanbeach.com</a>
-    </section>
-</main>
+        <div class="subheader">Software Engineering Consultants</div>
+    </div>
+</section>
+<section class="section">
+    <a href="mailto:info@rowanbeach.com">info@rowanbeach.com</a>
+</section>
 </body>
